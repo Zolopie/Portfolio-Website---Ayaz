@@ -18,7 +18,7 @@ const Contact = () => {
             href="mailto:hello@example.com"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary-glow transition-smooth shadow-glow"
           >
-            <Mail className="h-4 w-4" /> hello@example.com
+            <Mail className="h-4 w-4" /> ayazlatif35@gmail.com
           </a>
 
           <div className="mt-8 flex items-center justify-center gap-3">
@@ -44,7 +44,7 @@ const Contact = () => {
         </div>
 
         <footer className="mt-24 border-t border-border/60 pt-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Alex Morgan. Built with React & Tailwind.
+          © {new Date().getFullYear()} Ayaz Latif. Built with React & Tailwind.
         </footer>
       </div>
     </section>

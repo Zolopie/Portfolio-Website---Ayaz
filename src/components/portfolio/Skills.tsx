@@ -3,8 +3,8 @@ import { Database, Layout, Server, Wrench } from "lucide-react";
 const groups = [
   { icon: Layout, title: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "Tailwind"] },
   { icon: Server, title: "Backend", items: ["Node.js", "Express", "REST APIs"] },
-  { icon: Database, title: "Database", items: ["SQLite", "PostgreSQL"] },
-  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code", "Figma"] },
+  { icon: Database, title: "Database", items: ["SQLite", "PostgreSQL", "Supabase"] },
+  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code", "Figma", "Android Studio"] },
 ];
 
 const Skills = () => {

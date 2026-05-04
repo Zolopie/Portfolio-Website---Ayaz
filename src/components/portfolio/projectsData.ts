@@ -2,6 +2,7 @@ import aiResume from "@/assets/project-ai-resume.jpg";
 import shiftlyCrm from "@/assets/project-shiftly-crm.jpg";
 import shiftlyMobile from "@/assets/project-shiftly-mobile.jpg";
 import pedBuddy from "@/assets/project-ped-buddy.jpg";
+import TLSlogistics from "@assests/project-ERP-TLS.jpg";
 
 export type Project = {
   id: string;
@@ -57,7 +58,7 @@ export const projects: Project[] = [
     gallery: [aiResume],
     github: "https://github.com",
     demo: "https://example.com",
-    year: "2025",
+    year: "2026",
     role: "Full-stack",
     status: "Live",
   },
@@ -94,7 +95,7 @@ export const projects: Project[] = [
     gallery: [shiftlyCrm],
     github: "https://github.com",
     demo: "https://example.com",
-    year: "2025",
+    year: "2026",
     role: "Full-stack",
     status: "Live",
   },
@@ -134,6 +135,43 @@ export const projects: Project[] = [
     role: "Mobile + API",
     status: "Beta",
   },
+    {
+    id: "TLS-Logistics",
+    title: "TLS Logistics",
+    tagline: "Web CRM for small workforce-driven teams",
+    description:
+      "Web-based CRM for small teams: authentication, dashboards, and full CRUD over customers, contracts and activity.",
+    overview: [
+      "TLS Logistics  centralizes customers, contracts and team activity in one dashboard built for small service businesses that have outgrown spreadsheets.",
+      "It includes role-based authentication, real-time KPIs, full CRUD modules and a search/filter layer fast enough to use as a daily driver.",
+      "The data model is intentionally simple — customers, contracts, activity — so onboarding a new team takes minutes, not days.",
+    ],
+    problem:
+      "Small workforce-driven businesses track customers and contracts in scattered spreadsheets, losing context and missing follow-ups.",
+    solution:
+      "A focused CRM with just the right modules — auth, dashboard, customers, contracts, activity — and zero bloat.",
+    features: [
+      "Email + role-based authentication (admin / member)",
+      "Analytics dashboard with KPIs & charts",
+      "Customer, contract & activity CRUD",
+      "Server-side search, filters and pagination",
+      "CSV export of any list view",
+      "Audit log of recent activity",
+    ],
+    highlights: [
+      { label: "Modules", value: "6" },
+      { label: "Avg. page load", value: "<400ms" },
+      { label: "Test coverage", value: "78%" },
+    ],
+    stack: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Recharts"],
+    cover: shiftlyCrm,
+    gallery: [shiftlyCrm],
+    github: "https://github.com",
+    demo: "https://example.com",
+    year: "2026",
+    role: "Full-stack",
+    status: "Live",
+  },
   {
     id: "ped-buddy",
     title: "Ped Buddy Mobile App",
@@ -165,7 +203,7 @@ export const projects: Project[] = [
     cover: pedBuddy,
     gallery: [pedBuddy],
     github: "https://github.com",
-    year: "2024",
+    year: "2026",
     role: "Mobile",
     status: "Released",
   },

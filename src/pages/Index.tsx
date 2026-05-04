@@ -10,7 +10,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>
-        <h1 className="sr-only">Alex Morgan — Full-Stack Developer Portfolio</h1>
+        <h1 className="sr-only">Ayaz Latif — Full-Stack Developer Portfolio</h1>
         <Hero />
         <Projects />
         <Skills />

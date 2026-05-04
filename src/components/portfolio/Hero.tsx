@@ -15,7 +15,7 @@ const Hero = () => {
             className="fade-in-up mt-6 text-5xl md:text-7xl font-semibold tracking-tight text-gradient"
             style={{ animationDelay: "80ms" }}
           >
-            Alex Morgan
+            Ayaz Latif
           </h1>
           <p
             className="fade-in-up mt-4 text-lg md:text-xl text-foreground/90"
@@ -27,7 +27,7 @@ const Hero = () => {
             className="fade-in-up mt-4 text-base md:text-lg text-muted-foreground max-w-xl mx-auto"
             style={{ animationDelay: "220ms" }}
           >
-            I build business applications and AI-powered tools — focused on
+            I build business applications and AI-powered tools, focused on
             clean code, great UX, and shipping useful software.
           </p>
 

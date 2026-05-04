@@ -11,16 +11,10 @@ const About = () => {
           </div>
           <div className="lg:col-span-2 space-y-5 text-muted-foreground leading-relaxed">
             <p>
-              I'm a full-stack developer who enjoys turning real business
-              problems into clean, reliable software. Most of my work sits at
-              the intersection of practical web apps and AI-powered tooling —
-              from CRMs and workforce apps to assistants that help people work
-              smarter.
+             I’m a full-stack developer focused on building practical, real-world applications that solve everyday business problems. My work includes systems like CRM platforms, workforce management apps, and AI-inspired tools that help users make better decisions.
             </p>
             <p>
-              I specialize in building end-to-end products with React on the
-              frontend and Node.js on the backend, with a strong eye for UX and
-              code maintainability.
+             I primarily work with JavaScript, using Node.js and Express on the backend, and modern frontend technologies to create clean, user-friendly interfaces. I enjoy designing complete systems from backend logic and APIs to frontend experience with a strong focus on simplicity, usability, and maintainability
             </p>
             <p className="text-foreground/90">
               I'm currently looking for <span className="text-primary">junior developer roles</span> where I can keep
