@@ -1,5 +1,11 @@
-import { ExternalLink, Github, X } from "lucide-react";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { ExternalLink, Github, Lightbulb, Sparkles, Target } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import type { Project } from "./projectsData";
 
 type Props = {
@@ -14,14 +20,6 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-card border-border p-0 rounded-2xl">
-        <button
-          onClick={() => onOpenChange(false)}
-          className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full border border-border bg-background/80 backdrop-blur hover:bg-secondary transition-smooth"
-          aria-label="Close"
-        >
-          <X className="h-4 w-4" />
-        </button>
-
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-2xl bg-secondary">
           <img
             src={project.cover}
@@ -30,32 +28,82 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             height={720}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+          <div className="absolute left-6 bottom-6 flex flex-wrap items-center gap-2">
+            <span className="rounded-full border border-border bg-background/70 backdrop-blur px-2.5 py-1 text-xs text-foreground">
+              {project.year}
+            </span>
+            <span className="rounded-full border border-border bg-background/70 backdrop-blur px-2.5 py-1 text-xs text-foreground">
+              {project.role}
+            </span>
+            <span className="rounded-full border border-primary/40 bg-primary/15 px-2.5 py-1 text-xs text-primary">
+              {project.status}
+            </span>
+          </div>
         </div>
 
         <div className="p-6 md:p-8">
-          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-            <span className="rounded-full border border-border bg-secondary/60 px-2.5 py-1">
-              {project.year}
-            </span>
-            <span className="rounded-full border border-border bg-secondary/60 px-2.5 py-1">
-              {project.role}
-            </span>
+          <DialogHeader className="text-left space-y-1">
+            <DialogTitle className="text-2xl md:text-3xl font-semibold tracking-tight">
+              {project.title}
+            </DialogTitle>
+            <DialogDescription className="text-primary text-sm">
+              {project.tagline}
+            </DialogDescription>
+          </DialogHeader>
+
+          {/* Overview */}
+          <div className="mt-6 space-y-3 text-sm md:text-base text-muted-foreground leading-relaxed">
+            {project.overview.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
 
-          <DialogTitle className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">
-            {project.title}
-          </DialogTitle>
-          <DialogDescription className="mt-1 text-primary text-sm">
-            {project.tagline}
-          </DialogDescription>
+          {/* Problem & Solution */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-border bg-secondary/40 p-5">
+              <div className="flex items-center gap-2 text-foreground">
+                <Target className="h-4 w-4 text-primary" />
+                <h4 className="text-sm font-semibold">Problem</h4>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {project.problem}
+              </p>
+            </div>
+            <div className="rounded-xl border border-border bg-secondary/40 p-5">
+              <div className="flex items-center gap-2 text-foreground">
+                <Lightbulb className="h-4 w-4 text-primary" />
+                <h4 className="text-sm font-semibold">Solution</h4>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {project.solution}
+              </p>
+            </div>
+          </div>
 
-          <p className="mt-5 text-sm md:text-base text-muted-foreground leading-relaxed">
-            {project.longDescription}
-          </p>
+          {/* Highlights */}
+          <div className="mt-6 grid grid-cols-3 gap-3">
+            {project.highlights.map((h) => (
+              <div
+                key={h.label}
+                className="rounded-xl border border-border bg-background/40 p-4 text-center"
+              >
+                <div className="text-base md:text-lg font-semibold text-foreground">
+                  {h.value}
+                </div>
+                <div className="mt-1 text-[11px] uppercase tracking-wide text-muted-foreground">
+                  {h.label}
+                </div>
+              </div>
+            ))}
+          </div>
 
+          {/* Features */}
           <div className="mt-8">
-            <h4 className="text-sm font-semibold text-foreground">Key features</h4>
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-primary" />
+              <h4 className="text-sm font-semibold text-foreground">Key features</h4>
+            </div>
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
               {project.features.map((f) => (
                 <li
@@ -69,6 +117,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             </ul>
           </div>
 
+          {/* Gallery (only if multiple) */}
           {project.gallery.length > 1 && (
             <div className="mt-8">
               <h4 className="text-sm font-semibold text-foreground">Screens</h4>
@@ -92,6 +141,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             </div>
           )}
 
+          {/* Stack */}
           <div className="mt-8">
             <h4 className="text-sm font-semibold text-foreground">Tech stack</h4>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -106,6 +156,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             </div>
           </div>
 
+          {/* CTAs */}
           <div className="mt-8 flex flex-wrap gap-3">
             {project.demo && (
               <a
@@ -124,7 +175,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground hover:bg-secondary transition-smooth"
               >
-                <Github className="h-4 w-4" /> GitHub
+                <Github className="h-4 w-4" /> View on GitHub
               </a>
             )}
           </div>
