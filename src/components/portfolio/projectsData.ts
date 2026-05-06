@@ -208,13 +208,13 @@ highlights: [
     status: "Live",
   },
   {
-    id: "ped-buddy",
-    title: "Ped Buddy Mobile App",
+    id: "pet-buddy",
+    title: "Pet Buddy Mobile App",
     tagline: "Friendly companion for routines & reminders",
     description:
       "A companion mobile app helping users track activity, routines, and reminders with a friendly, focused UI.",
     overview: [
-      "Ped Buddy keeps daily routines on track with smart reminders, streaks and gentle progress feedback. The app is designed around clarity and habit formation rather than gamification overload.",
+      "Pet Buddy keeps daily routines on track with smart reminders, streaks and gentle progress feedback. The app is designed around clarity and habit formation rather than gamification overload.",
       "All data is stored locally first, so the app stays fast and works offline. Users can opt into cloud sync later without losing history.",
       "The UI focuses on a single primary action per screen, making it usable in seconds even when the user is busy.",
     ],

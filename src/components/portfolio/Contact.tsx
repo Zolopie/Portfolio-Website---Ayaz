@@ -32,7 +32,7 @@ const Contact = () => {
               <Github className="h-4 w-4" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/muhammad-ayaz-738555230/"
               target="_blank"
               rel="noreferrer"
               className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card hover:bg-secondary transition-smooth"
