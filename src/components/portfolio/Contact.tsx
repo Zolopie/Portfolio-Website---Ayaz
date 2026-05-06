@@ -23,7 +23,7 @@ const Contact = () => {
 
           <div className="mt-8 flex items-center justify-center gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/Zolopie"
               target="_blank"
               rel="noreferrer"
               className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card hover:bg-secondary transition-smooth"

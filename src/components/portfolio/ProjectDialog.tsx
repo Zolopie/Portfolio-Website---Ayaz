@@ -17,25 +17,48 @@ type Props = {
 const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
   if (!project) return null;
 
+  // ONLY apply centered showcase styling to TLS Logistics & Shiftly CRM
+  const isShowcaseProject =
+    project.title === "TLS Logistics" ||
+    project.title === "Shiftly CRM";
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto bg-card border-border p-0 rounded-2xl">
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-2xl bg-secondary">
+        
+        {/* HERO IMAGE */}
+        <div
+          className={`relative aspect-[16/9] overflow-hidden rounded-t-2xl bg-secondary ${
+            isShowcaseProject
+              ? "flex items-center justify-center"
+              : "w-full"
+          }`}
+        >
           <img
             src={project.cover}
             alt={`${project.title} preview`}
             width={1280}
             height={720}
-            className="h-full w-full object-cover"
+            className={
+              isShowcaseProject
+                ? "h-[82%] w-auto object-contain mx-auto transition-all duration-500"
+                : "h-full w-full object-cover"
+            }
           />
+
+          {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+
+          {/* Tags */}
           <div className="absolute left-6 bottom-6 flex flex-wrap items-center gap-2">
             <span className="rounded-full border border-border bg-background/70 backdrop-blur px-2.5 py-1 text-xs text-foreground">
               {project.year}
             </span>
+
             <span className="rounded-full border border-border bg-background/70 backdrop-blur px-2.5 py-1 text-xs text-foreground">
               {project.role}
             </span>
+
             <span className="rounded-full border border-primary/40 bg-primary/15 px-2.5 py-1 text-xs text-primary">
               {project.status}
             </span>
@@ -47,6 +70,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             <DialogTitle className="text-2xl md:text-3xl font-semibold tracking-tight">
               {project.title}
             </DialogTitle>
+
             <DialogDescription className="text-primary text-sm">
               {project.tagline}
             </DialogDescription>
@@ -66,15 +90,18 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
                 <Target className="h-4 w-4 text-primary" />
                 <h4 className="text-sm font-semibold">Problem</h4>
               </div>
+
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                 {project.problem}
               </p>
             </div>
+
             <div className="rounded-xl border border-border bg-secondary/40 p-5">
               <div className="flex items-center gap-2 text-foreground">
                 <Lightbulb className="h-4 w-4 text-primary" />
                 <h4 className="text-sm font-semibold">Solution</h4>
               </div>
+
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                 {project.solution}
               </p>
@@ -91,6 +118,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
                 <div className="text-base md:text-lg font-semibold text-foreground">
                   {h.value}
                 </div>
+
                 <div className="mt-1 text-[11px] uppercase tracking-wide text-muted-foreground">
                   {h.label}
                 </div>
@@ -102,8 +130,11 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
           <div className="mt-8">
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-primary" />
-              <h4 className="text-sm font-semibold text-foreground">Key features</h4>
+              <h4 className="text-sm font-semibold text-foreground">
+                Key features
+              </h4>
             </div>
+
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
               {project.features.map((f) => (
                 <li
@@ -117,10 +148,13 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             </ul>
           </div>
 
-          {/* Gallery (only if multiple) */}
+          {/* Gallery */}
           {project.gallery.length > 1 && (
             <div className="mt-8">
-              <h4 className="text-sm font-semibold text-foreground">Screens</h4>
+              <h4 className="text-sm font-semibold text-foreground">
+                Screens
+              </h4>
+
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
                 {project.gallery.map((src, i) => (
                   <div
@@ -143,7 +177,10 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
 
           {/* Stack */}
           <div className="mt-8">
-            <h4 className="text-sm font-semibold text-foreground">Tech stack</h4>
+            <h4 className="text-sm font-semibold text-foreground">
+              Tech stack
+            </h4>
+
             <div className="mt-3 flex flex-wrap gap-2">
               {project.stack.map((s) => (
                 <span
@@ -156,7 +193,7 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
             </div>
           </div>
 
-          {/* CTAs */}
+          {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap gap-3">
             {project.demo && (
               <a
@@ -165,9 +202,11 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary-glow transition-smooth shadow-glow"
               >
-                <ExternalLink className="h-4 w-4" /> Live Demo
+                <ExternalLink className="h-4 w-4" />
+                Live Demo
               </a>
             )}
+
             {project.github && (
               <a
                 href={project.github}
@@ -175,7 +214,8 @@ const ProjectDialog = ({ project, open, onOpenChange }: Props) => {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground hover:bg-secondary transition-smooth"
               >
-                <Github className="h-4 w-4" /> View on GitHub
+                <Github className="h-4 w-4" />
+                View on GitHub
               </a>
             )}
           </div>

@@ -42,7 +42,7 @@ const Hero = () => {
               View Projects <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/Zolopie"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground hover:bg-secondary transition-smooth"

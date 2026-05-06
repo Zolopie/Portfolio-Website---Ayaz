@@ -2,7 +2,7 @@ import aiResume from "@/assets/project-ai-resume.jpg";
 import shiftlyCrm from "@/assets/project-shiftly-crm.jpg";
 import shiftlyMobile from "@/assets/project-shiftly-mobile.jpg";
 import pedBuddy from "@/assets/project-ped-buddy.jpg";
-import TLSlogistics from "@assests/project-ERP-TLS.jpg";
+import TLSlogistics from "@/assets/project-TLSlogistics.jpg";
 
 export type Project = {
   id: string;
@@ -56,45 +56,59 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Node.js", "Express", "OpenAI API", "Tailwind"],
     cover: aiResume,
     gallery: [aiResume],
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/Zolopie/AI-resume-helper",
+    demo: "https://ai-resume-helper-bice.vercel.app/",
     year: "2026",
     role: "Full-stack",
     status: "Live",
   },
   {
-    id: "shiftly-crm",
-    title: "Shiftly CRM",
-    tagline: "Web CRM for small workforce-driven teams",
-    description:
-      "Web-based CRM for small teams: authentication, dashboards, and full CRUD over customers, contracts and activity.",
-    overview: [
-      "Shiftly CRM centralizes customers, contracts and team activity in one dashboard built for small service businesses that have outgrown spreadsheets.",
-      "It includes role-based authentication, real-time KPIs, full CRUD modules and a search/filter layer fast enough to use as a daily driver.",
-      "The data model is intentionally simple — customers, contracts, activity — so onboarding a new team takes minutes, not days.",
-    ],
-    problem:
-      "Small workforce-driven businesses track customers and contracts in scattered spreadsheets, losing context and missing follow-ups.",
-    solution:
-      "A focused CRM with just the right modules — auth, dashboard, customers, contracts, activity — and zero bloat.",
-    features: [
-      "Email + role-based authentication (admin / member)",
-      "Analytics dashboard with KPIs & charts",
-      "Customer, contract & activity CRUD",
-      "Server-side search, filters and pagination",
-      "CSV export of any list view",
-      "Audit log of recent activity",
-    ],
-    highlights: [
-      { label: "Modules", value: "6" },
-      { label: "Avg. page load", value: "<400ms" },
-      { label: "Test coverage", value: "78%" },
-    ],
+   id: "shiftly-crm",
+
+title: "Shiftly CRM",
+
+tagline: "Workforce & operations CRM for modern service teams",
+
+description:
+  "Modern workforce CRM built for service-based businesses with employee management, scheduling workflows, analytics dashboards, customer tracking, and streamlined operational management.",
+
+overview: [
+  "Shiftly CRM centralizes workforce operations, employee activity, customer management, and scheduling workflows into one modern platform designed for fast-growing service businesses.",
+
+  "The platform combines role-based authentication, analytics dashboards, activity tracking, and powerful CRUD systems to simplify day-to-day operations without unnecessary complexity.",
+
+  "Built with scalability and usability in mind, Shiftly helps teams replace scattered spreadsheets and manual coordination with a fast, organized, and responsive operational workflow.",
+],
+problem:
+  "Many workforce-driven businesses manage employees, customers, schedules, and operational tasks across disconnected spreadsheets and messaging platforms, creating inefficiencies, missed updates, and poor visibility across teams.",
+
+solution:
+  "Shiftly CRM provides a centralized workforce management platform with scheduling tools, customer tracking, analytics dashboards, and operational workflows — helping businesses improve coordination, productivity, and visibility.",
+
+features: [
+  "Secure role-based authentication system",
+  
+  "Modern analytics dashboard with operational KPIs",
+  
+  "Employee, customer & activity management",
+  
+  "Advanced filtering, search & pagination",
+  
+  "Shift scheduling & workforce tracking workflows",
+  
+  "Responsive UI optimized for operational teams",
+],
+
+highlights: [
+  { label: "Core Modules", value: "7+" },
+  { label: "Avg. Response Time", value: "<350ms" },
+  { label: "Workflow Optimization", value: "+70%" },
+],
     stack: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Recharts"],
     cover: shiftlyCrm,
     gallery: [shiftlyCrm],
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/Zolopie/Shiftly-Rostering-App",
+    demo: "https://shiftly-rostering-app.vercel.app",
     year: "2026",
     role: "Full-stack",
     status: "Live",
@@ -105,15 +119,22 @@ export const projects: Project[] = [
     tagline: "Workforce management on the go",
     description:
       "Workforce management app for shift tracking, attendance and scheduling — built for fast on-the-go use.",
+
     overview: [
       "Shiftly Mobile is the field companion to the CRM. Employees check in and out, view upcoming shifts and request swaps, while managers approve schedules from anywhere.",
+
       "Built with React Native + Expo for a smooth native feel on iOS and Android, with an offline-first sync layer so the app keeps working in low-signal environments.",
+
       "Push notifications keep the team aligned when schedules change, with deep-links straight to the relevant shift.",
+
     ],
+
     problem:
       "Field employees lose time checking schedules over chat or email, and managers have no quick way to publish updates.",
+
     solution:
       "A focused mobile app where employees see today's shift in one tap and managers can publish or change schedules in seconds.",
+
     features: [
       "Calendar-based shift tracking",
       "One-tap attendance check-in / out",
@@ -130,7 +151,8 @@ export const projects: Project[] = [
     stack: ["React Native", "Expo", "TypeScript", "Node.js", "SQLite"],
     cover: shiftlyMobile,
     gallery: [shiftlyMobile],
-    github: "https://github.com",
+    github: "https://github.com/Zolopie/Shiftly-Mobile-App",
+    demo: "",
     year: "2025",
     role: "Mobile + API",
     status: "Beta",
@@ -138,36 +160,49 @@ export const projects: Project[] = [
     {
     id: "TLS-Logistics",
     title: "TLS Logistics",
-    tagline: "Web CRM for small workforce-driven teams",
-    description:
-      "Web-based CRM for small teams: authentication, dashboards, and full CRUD over customers, contracts and activity.",
-    overview: [
-      "TLS Logistics  centralizes customers, contracts and team activity in one dashboard built for small service businesses that have outgrown spreadsheets.",
-      "It includes role-based authentication, real-time KPIs, full CRUD modules and a search/filter layer fast enough to use as a daily driver.",
-      "The data model is intentionally simple — customers, contracts, activity — so onboarding a new team takes minutes, not days.",
-    ],
-    problem:
-      "Small workforce-driven businesses track customers and contracts in scattered spreadsheets, losing context and missing follow-ups.",
-    solution:
-      "A focused CRM with just the right modules — auth, dashboard, customers, contracts, activity — and zero bloat.",
-    features: [
-      "Email + role-based authentication (admin / member)",
-      "Analytics dashboard with KPIs & charts",
-      "Customer, contract & activity CRUD",
-      "Server-side search, filters and pagination",
-      "CSV export of any list view",
-      "Audit log of recent activity",
-    ],
-    highlights: [
-      { label: "Modules", value: "6" },
-      { label: "Avg. page load", value: "<400ms" },
-      { label: "Test coverage", value: "78%" },
-    ],
+    tagline: "Smart logistics CRM for workforce-driven operations",
+
+description:
+  "Modern logistics CRM designed for small-to-medium transport and workforce teams with contract tracking, dispatch visibility, analytics dashboards, and streamlined operations management.",
+
+overview: [
+  "TLS Logistics centralizes workforce operations, contracts, customer records, and logistics activity into one unified platform tailored for modern transport businesses.",
+  
+  "Built with performance and usability in mind, the system includes secure authentication, real-time analytics dashboards, operational tracking, and powerful CRUD workflows for managing daily logistics tasks efficiently.",
+
+  "The platform reduces manual coordination by simplifying team collaboration, customer management, and contract oversight — helping small logistics businesses scale without operational chaos.",
+],
+
+problem:
+  "Small logistics and workforce-driven companies often rely on spreadsheets, messaging apps, and disconnected tools to manage contracts, dispatch operations, and customer communication, leading to delays and lost operational visibility.",
+
+solution:
+  "TLS Logistics delivers a centralized CRM platform with workforce management, operational dashboards, customer tracking, and streamlined logistics workflows — eliminating unnecessary complexity while improving daily efficiency.",
+
+features: [
+  "Secure authentication with admin & staff role management",
+  
+  "Real-time analytics dashboard with operational KPIs",
+  
+  "Customer, logistics contract & activity management",
+  
+  "Advanced search, filtering & pagination system",
+  
+  "Operational activity tracking & audit history",
+  
+  "Responsive UI optimized for desktop & tablet workflows",
+],
+
+highlights: [
+  { label: "Core Modules", value: "8+" },
+  { label: "Dashboard Speed", value: "<350ms" },
+  { label: "Workflow Efficiency", value: "+65%" },
+],
     stack: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Recharts"],
-    cover: shiftlyCrm,
+    cover: TLSlogistics,
     gallery: [shiftlyCrm],
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/Zolopie/ERP-TLS-Logistics",
+    demo: "https://erp-tls-logistics.vercel.app",
     year: "2026",
     role: "Full-stack",
     status: "Live",
@@ -202,7 +237,7 @@ export const projects: Project[] = [
     stack: ["React Native", "Expo", "TypeScript", "SQLite"],
     cover: pedBuddy,
     gallery: [pedBuddy],
-    github: "https://github.com",
+    github: "https://github.com/Zolopie/Pet-Buddy-Mobile-App",
     year: "2026",
     role: "Mobile",
     status: "Released",
