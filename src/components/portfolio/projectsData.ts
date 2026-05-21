@@ -3,6 +3,7 @@ import shiftlyCrm from "@/assets/project-shiftly-crm.jpg";
 import shiftlyMobile from "@/assets/project-shiftly-mobile.jpg";
 import pedBuddy from "@/assets/project-ped-buddy.jpg";
 import TLSlogistics from "@/assets/project-TLSlogistics.jpg";
+import templateStudio from "@/assets/project-templateStudio.png";
 
 export type Project = {
   id: string;
@@ -25,47 +26,61 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    id: "ai-resume-assistant",
-    title: "AI Resume Assistant",
-    tagline: "Chat-based resume coach powered by LLMs",
-    description:
-      "A chat-based resume improvement tool that analyzes CVs against job descriptions and returns a match score with actionable suggestions.",
-    overview: [
-      "AI Resume Assistant helps job seekers tailor their CV to a specific role in minutes instead of hours. Users paste a job description, upload their resume, and chat with an assistant that reviews each section.",
-      "The assistant returns a quantitative match score (0–100), highlights missing keywords and weak bullet points, and proposes targeted rewrites the user can accept with one click.",
-      "Built around a streaming LLM backend with prompt templates per resume section (summary, experience, skills) so suggestions stay focused and recruiter-ready.",
-    ],
-    problem:
-      "Job seekers struggle to tailor each CV per application, and generic AI prompts often produce vague, recruiter-unfriendly output.",
-    solution:
-      "A guided chat workflow that grounds the model in the user's actual resume + the target job description, then produces structured rewrites and a measurable match score.",
-    features: [
-      "Conversational CV review with section-aware context",
-      "Job-description match score (0–100)",
-      "Targeted bullet & summary rewrites",
-      "Inline accept / reject suggestions",
-      "Export improved resume as PDF",
-      "Saves history per job application",
-    ],
-    highlights: [
-      { label: "Avg. match score lift", value: "+27 pts" },
-      { label: "Median time per CV", value: "8 min" },
-      { label: "Accepted suggestions", value: "72%" },
-    ],
-    stack: ["React", "TypeScript", "Node.js", "Express", "OpenAI API", "Tailwind"],
-    cover: aiResume,
-    gallery: [aiResume],
-    github: "https://github.com/Zolopie/AI-resume-helper",
-    demo: "https://ai-resume-helper-bice.vercel.app/",
+      {
+    id: "TLS-Logistics",
+    title: "TLS Logistics",
+    tagline: "Smart logistics CRM for workforce-driven operations",
+
+description:
+  "Modern logistics CRM designed for small-to-medium transport and workforce teams with contract tracking, dispatch visibility, analytics dashboards, and streamlined operations management.",
+
+overview: [
+  "TLS Logistics centralizes workforce operations, contracts, customer records, and logistics activity into one unified platform tailored for modern transport businesses.",
+  
+  "Built with performance and usability in mind, the system includes secure authentication, real-time analytics dashboards, operational tracking, and powerful CRUD workflows for managing daily logistics tasks efficiently.",
+
+  "The platform reduces manual coordination by simplifying team collaboration, customer management, and contract oversight — helping small logistics businesses scale without operational chaos.",
+],
+
+problem:
+  "Small logistics and workforce-driven companies often rely on spreadsheets, messaging apps, and disconnected tools to manage contracts, dispatch operations, and customer communication, leading to delays and lost operational visibility.",
+
+solution:
+  "TLS Logistics delivers a centralized CRM platform with workforce management, operational dashboards, customer tracking, and streamlined logistics workflows — eliminating unnecessary complexity while improving daily efficiency.",
+
+features: [
+  "Secure authentication with admin & staff role management",
+  
+  "Real-time analytics dashboard with operational KPIs",
+  
+  "Customer, logistics contract & activity management",
+  
+  "Advanced search, filtering & pagination system",
+  
+  "Operational activity tracking & audit history",
+  
+  "Responsive UI optimized for desktop & tablet workflows",
+],
+
+highlights: [
+  { label: "Core Modules", value: "8+" },
+  { label: "Dashboard Speed", value: "<350ms" },
+  { label: "Workflow Efficiency", value: "+65%" },
+],
+    stack: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Recharts"],
+    cover: TLSlogistics,
+    gallery: [shiftlyCrm],
+    github: "https://github.com/Zolopie/ERP-TLS-Logistics",
+    demo: "https://erp-tls-logistics.vercel.app",
     year: "2026",
     role: "Full-stack",
     status: "Live",
   },
+  
   {
    id: "shiftly-crm",
 
-title: "Shiftly CRM",
+title: "Shiftly Rostering App",
 
 tagline: "Workforce & operations CRM for modern service teams",
 
@@ -157,56 +172,66 @@ highlights: [
     role: "Mobile + API",
     status: "Beta",
   },
-    {
-    id: "TLS-Logistics",
-    title: "TLS Logistics",
-    tagline: "Smart logistics CRM for workforce-driven operations",
+{
+    id: "template-studio",
+    title: "Template Studio",
+    tagline: "Premium digital marketplace for modern website templates",
+    description:
+      "A modern digital marketplace platform that enables users to discover, preview, and purchase high-quality website templates through a seamless and responsive experience.",
 
-description:
-  "Modern logistics CRM designed for small-to-medium transport and workforce teams with contract tracking, dispatch visibility, analytics dashboards, and streamlined operations management.",
+    overview: [
+      "Template Studio was designed to simplify how developers, businesses, and creators discover professional website templates and digital assets. The platform provides a curated marketplace experience with fast browsing, filtering, and preview capabilities.",
+      
+      "Users can explore templates across categories, search for specific designs, preview details, and manage purchases through an intuitive interface designed for speed and usability.",
 
-overview: [
-  "TLS Logistics centralizes workforce operations, contracts, customer records, and logistics activity into one unified platform tailored for modern transport businesses.",
-  
-  "Built with performance and usability in mind, the system includes secure authentication, real-time analytics dashboards, operational tracking, and powerful CRUD workflows for managing daily logistics tasks efficiently.",
+      "The system was built using scalable frontend architecture with authentication, payment integration, responsive UI components, and optimized performance to deliver a production-ready digital platform.",
+    ],
 
-  "The platform reduces manual coordination by simplifying team collaboration, customer management, and contract oversight — helping small logistics businesses scale without operational chaos.",
-],
+    problem:
+      "Finding quality website templates often requires searching across multiple platforms, resulting in inconsistent experiences, difficult navigation, and time-consuming discovery processes.",
 
-problem:
-  "Small logistics and workforce-driven companies often rely on spreadsheets, messaging apps, and disconnected tools to manage contracts, dispatch operations, and customer communication, leading to delays and lost operational visibility.",
+    solution:
+      "Template Studio centralizes template discovery into a single platform with smart filtering, secure purchasing, user authentication, and an optimized browsing experience.",
 
-solution:
-  "TLS Logistics delivers a centralized CRM platform with workforce management, operational dashboards, customer tracking, and streamlined logistics workflows — eliminating unnecessary complexity while improving daily efficiency.",
+    features: [
+      "Template marketplace with category filtering",
+      "Advanced search and sorting functionality",
+      "Responsive template preview pages",
+      "User authentication and profile management",
+      "Secure payment and checkout system",
+      "Shopping cart functionality",
+      "Wishlist and saved templates",
+      "Interactive UI with smooth animations",
+      "Mobile-friendly design",
+      "Fast-loading optimized architecture",
+    ],
 
-features: [
-  "Secure authentication with admin & staff role management",
-  
-  "Real-time analytics dashboard with operational KPIs",
-  
-  "Customer, logistics contract & activity management",
-  
-  "Advanced search, filtering & pagination system",
-  
-  "Operational activity tracking & audit history",
-  
-  "Responsive UI optimized for desktop & tablet workflows",
-],
+    highlights: [
+      { label: "Templates available", value: "100+" },
+      { label: "Platform responsiveness", value: "100%" },
+      { label: "Performance optimization", value: "High" },
+    ],
 
-highlights: [
-  { label: "Core Modules", value: "8+" },
-  { label: "Dashboard Speed", value: "<350ms" },
-  { label: "Workflow Efficiency", value: "+65%" },
-],
-    stack: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Recharts"],
-    cover: TLSlogistics,
-    gallery: [shiftlyCrm],
-    github: "https://github.com/Zolopie/ERP-TLS-Logistics",
-    demo: "https://erp-tls-logistics.vercel.app",
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Authentication",
+      "Payment Integration",
+      "Cloudflare",
+    ],
+
+  cover: templateStudio,
+gallery: [templateStudio],
+
+    github: "https://github.com/Zolopie/template-studio-pro",
+    demo: "https://templatestudio.ayazzlatif2002.workers.dev/",
+
     year: "2026",
-    role: "Full-stack",
+    role: "Full-stack Developer",
     status: "Live",
-  },
+},
   {
     id: "pet-buddy",
     title: "Pet Buddy Mobile App",
@@ -241,5 +266,42 @@ highlights: [
     year: "2026",
     role: "Mobile",
     status: "Released",
+  },
+  {
+    id: "ai-resume-assistant",
+    title: "AI Resume Assistant",
+    tagline: "Chat-based resume coach powered by LLMs",
+    description:
+      "A chat-based resume improvement tool that analyzes CVs against job descriptions and returns a match score with actionable suggestions.",
+    overview: [
+      "AI Resume Assistant helps job seekers tailor their CV to a specific role in minutes instead of hours. Users paste a job description, upload their resume, and chat with an assistant that reviews each section.",
+      "The assistant returns a quantitative match score (0–100), highlights missing keywords and weak bullet points, and proposes targeted rewrites the user can accept with one click.",
+      "Built around a streaming LLM backend with prompt templates per resume section (summary, experience, skills) so suggestions stay focused and recruiter-ready.",
+    ],
+    problem:
+      "Job seekers struggle to tailor each CV per application, and generic AI prompts often produce vague, recruiter-unfriendly output.",
+    solution:
+      "A guided chat workflow that grounds the model in the user's actual resume + the target job description, then produces structured rewrites and a measurable match score.",
+    features: [
+      "Conversational CV review with section-aware context",
+      "Job-description match score (0–100)",
+      "Targeted bullet & summary rewrites",
+      "Inline accept / reject suggestions",
+      "Export improved resume as PDF",
+      "Saves history per job application",
+    ],
+    highlights: [
+      { label: "Avg. match score lift", value: "+27 pts" },
+      { label: "Median time per CV", value: "8 min" },
+      { label: "Accepted suggestions", value: "72%" },
+    ],
+    stack: ["React", "TypeScript", "Node.js", "Express", "OpenAI API", "Tailwind"],
+    cover: aiResume,
+    gallery: [aiResume],
+    github: "https://github.com/Zolopie/AI-resume-helper",
+    demo: "https://ai-resume-helper-bice.vercel.app/",
+    year: "2026",
+    role: "Full-stack",
+    status: "Live",
   },
 ];
